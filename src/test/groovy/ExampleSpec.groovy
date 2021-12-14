@@ -1,5 +1,4 @@
 import spock.lang.Specification
-import spock.lang.Unroll
 
 // MUST extend Specification
 class ExampleSpec extends Specification {
@@ -16,9 +15,8 @@ class ExampleSpec extends Specification {
         a == 2
     }
 
-    // parametrized test
-    @Unroll('#x plus #y should be #z')
-    def 'data-driven test'() {
+    // parameterized test
+    def '#x plus #y should be #z'() {
         expect:
         x + y == z
 
@@ -28,5 +26,4 @@ class ExampleSpec extends Specification {
         71 | 12 | 83
     }
 }
-
 // tutorial: https://www.pluralsight.com/guides/introduction-to-testing-with-bdd-and-the-spock-framework
