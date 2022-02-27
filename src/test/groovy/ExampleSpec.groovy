@@ -4,7 +4,7 @@ import spock.lang.Specification
 class ExampleSpec extends Specification {
 
     // standard Spock test
-    def '1 plus 1 should be 2'() {
+    def '1 incremented by 1 should be 2'() {
         given:
         def a = 1
 
@@ -21,9 +21,11 @@ class ExampleSpec extends Specification {
         x + y == z
 
         where:
-        x  | y  | z
-        3  | 4  | 7
-        71 | 12 | 83
+        x  | y  || z
+        -1 | 4  || 3
+        11 | -5 || 6
+        71 | 12 || 83
     }
+
 }
 // tutorial: https://www.pluralsight.com/guides/introduction-to-testing-with-bdd-and-the-spock-framework

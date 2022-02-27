@@ -1,1 +1,1 @@
-Java stub project for Coderetreat using Spock / JUnit5
+Java & Gradle stub project for Coderetreat using Spock / JUnit5
