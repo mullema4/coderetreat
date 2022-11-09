@@ -12,21 +12,20 @@ repositories {
 }
 
 dependencies {
-    ext.junitVersion = '5.8.2'
+    ext.junitVersion = '5.9.1'
     testCompile "org.junit.jupiter:junit-jupiter-api:$junitVersion"
     testCompile "org.junit.jupiter:junit-jupiter-params:$junitVersion"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 
     // mandatory dependencies for using Spock
-    implementation 'org.codehaus.groovy:groovy:3.0.9'
-    testImplementation 'org.spockframework:spock-core:2.1-groovy-3.0'
+    testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
 
     // optional dependencies for using Spock
     testImplementation 'org.hamcrest:hamcrest-core:2.2'   // only necessary if Hamcrest matchers are used
-    testRuntimeOnly 'net.bytebuddy:byte-buddy:1.12.8' // allows mocking of classes (in addition to interfaces)
+    testRuntimeOnly 'net.bytebuddy:byte-buddy:1.12.18' // allows mocking of classes (in addition to interfaces)
     testRuntimeOnly 'org.objenesis:objenesis:3.2'  // allows mocking of classes without default constructor
 
-    ext.lombokVersion = '1.18.22'
+    ext.lombokVersion = '1.18.24'
     compileOnly "org.projectlombok:lombok:$lombokVersion"
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
     testCompileOnly "org.projectlombok:lombok:$lombokVersion"
